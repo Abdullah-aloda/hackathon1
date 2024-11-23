@@ -8,6 +8,10 @@
                 width: 600px;
                 height: auto;
             }
+
+            h1 {
+                color: greenyellow;
+            }
         </style>
     </head>
     <body>
@@ -15,5 +19,30 @@
         <p>I think HTML is cool</p>
 
         <img src="https://performancedrive.com.au/wp-content/uploads/2022/10/2023-BMW-M2-red.jpeg">
+
+        <blockquote>"Ye" -Wrd</blockquote>
+        <button onClick ="changeQuote()">CHange quote bro</button>
+
+        <script>
+            var index = 0;
+
+            function changeQuote() {
+                var quotes = [
+                    `"web development cool ig" - non chalant guy`,
+                    `"I enjoy hammerhacks ig" - chill guy`,
+                    `"Maura" - ahmed`,
+                    `"Ye" - Wrd`,
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                if (index >= 4) {
+                    index = 0;
+                }
+
+            }
+        </script>
     </body>
 </HTML>
